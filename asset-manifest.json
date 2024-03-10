@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/puromed-public/booking/static/css/main.d9d7096b.css",
-    "main.js": "/puromed-public/booking/static/js/main.693afd33.js",
+    "main.js": "/puromed-public/booking/static/js/main.fd06c1b2.js",
     "static/media/PuromedLoginPhoto.png": "/puromed-public/booking/static/media/PuromedLoginPhoto.7eb075790af39a470f9a.png",
     "static/media/PuromedRegistrationPhoto.png": "/puromed-public/booking/static/media/PuromedRegistrationPhoto.eea7462f20b31e475075.png",
     "static/media/PuromedLogotype.svg": "/puromed-public/booking/static/media/PuromedLogotype.1983fde6bee13a633c98c66148762404.svg",
@@ -17,10 +17,10 @@
     "static/media/chevron_calendar_hover.svg": "/puromed-public/booking/static/media/chevron_calendar_hover.6ce8eea33d70033af020.svg",
     "static/media/checkmark.svg": "/puromed-public/booking/static/media/checkmark.d05efea035bae66b2c02.svg",
     "main.d9d7096b.css.map": "/puromed-public/booking/static/css/main.d9d7096b.css.map",
-    "main.693afd33.js.map": "/puromed-public/booking/static/js/main.693afd33.js.map"
+    "main.fd06c1b2.js.map": "/puromed-public/booking/static/js/main.fd06c1b2.js.map"
   },
   "entrypoints": [
     "static/css/main.d9d7096b.css",
-    "static/js/main.693afd33.js"
+    "static/js/main.fd06c1b2.js"
   ]
 }
