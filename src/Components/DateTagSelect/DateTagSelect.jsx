@@ -57,9 +57,9 @@ const DateTagSelect = ({ date, pastVisit, scheduledVisit, hideCancelVisit }) => 
         else {
             return (
                 <div className='date-selector__controls'>
-                    <Tag type="primary" text="8:30" />
-                    <Tag type="primary" text="12:10" />
-                    <Tag type="primary" text="15:30" />
+                    <Tag linkTo="/appointment-details" type="primary" text="8:30" />
+                    <Tag linkTo="/appointment-details" type="primary" text="12:10" />
+                    <Tag linkTo="/appointment-details" type="primary" text="15:30" />
                     <Tag type="secondary" text={t(`show_more`)} onClick={() => setShowHourPicker(true)} />
                 </div>)
         }

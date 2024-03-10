@@ -47,10 +47,11 @@ export const RegistrationForm = () => {
                     shape={ButtonShape.Rounded}
                     text={t("sign_up_action")}
                     submit
+                    linkTo={"/booking"}
                 />
             </FormRow>
             <FormRow>
-                <ExtraActions label={t("already_have_account")} buttonLabel={t("sign_in_action")} />
+                <ExtraActions linkTo={"/login"} label={t("already_have_account")} buttonLabel={t("sign_in_action")} />
             </FormRow>
         </Form>
     );

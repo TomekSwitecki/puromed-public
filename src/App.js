@@ -9,13 +9,14 @@ import History from "./Sections/History/History";
 import ScheduledVisits from "./Sections/ScheduledVisits/ScheduledVisits";
 import Results from "./Sections/Results/Results";
 import AppointmentDetails from "./Sections/AppointmentDetails/AppointmentDetails";
+import { HashRouter } from "react-router-dom";
 function App() {
 
   return (<div className="app">
-    <Router>
+    <HashRouter>
 
       <Routes>
-        <Route path='/' element={<BookApointment />} />
+        <Route path='/booking' element={<BookApointment />} />
         <Route path='/appointment-details' element={<AppointmentDetails />} />
         <Route path='/registration' element={<Registration />} />
         <Route path='/login' element={<Login />} />
@@ -24,7 +25,7 @@ function App() {
         <Route path='/scheduled-visits' element={<ScheduledVisits />} />
         <Route path='/history' element={<History />} />
       </Routes>
-    </Router>
+    </HashRouter>
   </div>);
 }
 

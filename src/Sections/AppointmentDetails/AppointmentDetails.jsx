@@ -37,7 +37,7 @@ const FormPrepend = () => {
     const { t } = useTranslation();
     return (
         <React.Fragment>
-            <ExtraActions fitContent label={t(`already_have_account`)} buttonLabel={t(`sign_in`)} sublabel={t(`continue_as_guest`)} />
+            <ExtraActions linkTo={"/login"} fitContent label={t(`already_have_account`)} buttonLabel={t(`sign_in`)} sublabel={t(`continue_as_guest`)} />
         </React.Fragment>
     );
 }
@@ -55,6 +55,7 @@ const AppointmentDetails = ({ }) => {
     const [termsOfUse, setTermsOfUse] = useState(false);
     const [saveData, setSaveData] = useState(false);
     const [hasPesel, setHasPesel] = useState(true);
+    const [selectedDate, setSelectedDate] = useState(null);
 
     const handleChangePassword = () => {
         setChangePassword(!changePassword);
@@ -102,6 +103,10 @@ const AppointmentDetails = ({ }) => {
         ></iframe>
     );
 
+    const handleDateChange = (event) => {
+        setSelectedDate(event.target.value);
+    };
+
     const mainPart = (
         <React.Fragment>
             <div className='content-wrapper'>
@@ -134,7 +139,7 @@ const AppointmentDetails = ({ }) => {
                             <TextInput label={t(`pesel`)} placeholder={t(`pesel_input_placeholder`)} required />
                         </FormRow>}
                         {!hasPesel && <FormRow>
-                            <DatePicker id={5} label={t(`date_of_birth`)} placeholder={t(`date_of_birth_placeholder`)} required></DatePicker>
+                            <DatePicker value={selectedDate} onChange={handleDateChange} id={5} label={t(`date_of_birth`)} placeholder={t(`date_of_birth_placeholder`)} required></DatePicker>
                         </FormRow>}
                         <FormRow>
                             <Checkbox label={t(`dont_have_pesel`)} value={!hasPesel} onChange={handleChangeHasPesel} />

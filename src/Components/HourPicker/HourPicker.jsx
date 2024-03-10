@@ -224,8 +224,7 @@ const HourPicker = () => {
                 type={label === "-" ? "not-available" : "primary"}
                 key={label}
                 text={label}
-                onClick={() => handleButtonClick(day, label)}
-            />
+                linkTo="/appointment-details"></Tag>
         ));
 
         return (

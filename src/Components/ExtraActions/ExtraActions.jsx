@@ -5,7 +5,7 @@ import Button, { ButtonType, ButtonColor, ButtonShape, ButtonSize } from '../../
 import { IconAvatarColor } from '../../Components/IconAvatar/IconAvatar';
 import FormRow from '../Form/FormRow';
 import Label from '../Label/Label';
-const ExtraActions = ({ label, buttonLabel, sublabel, fitContent }) => {
+const ExtraActions = ({ label, buttonLabel, sublabel, fitContent, linkTo }) => {
     return (
         <div className='extra_action--wrapper'>
             <FormRow fitContent={fitContent}>
@@ -16,6 +16,7 @@ const ExtraActions = ({ label, buttonLabel, sublabel, fitContent }) => {
                     size={ButtonSize.Compact}
                     text={buttonLabel}
                     submit
+                    linkTo={linkTo}
                 />
             </FormRow>
             {sublabel && <Label>{sublabel}</Label>}

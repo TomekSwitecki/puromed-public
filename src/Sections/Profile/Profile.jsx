@@ -21,6 +21,7 @@ import DatePicker from '../../Components/DatePicker/DatePicker';
 const Profile = ({ }) => {
     const location = useLocation();
     const [changePassword, setChangePassword] = useState(false);
+    const [selectedDate, setSelectedDate] = useState(null);
     const { t } = useTranslation();
     const handleChangePassword = () => {
         setChangePassword(!changePassword);
@@ -43,6 +44,10 @@ const Profile = ({ }) => {
         />
     );
 
+    const handleDateChange = (event) => {
+        setSelectedDate(event.target.value);
+    };
+
     const mainPart = (
         <Form header={formHeader}>
             <FormRow>
@@ -57,7 +62,7 @@ const Profile = ({ }) => {
                 <TextInput label={t(`pesel`)} placeholder={t(`pesel_input_placeholder`)} />
             </FormRow>
             <FormRow>
-                <DatePicker id={5} label={t(`date_of_birth`)} placeholder={t(`date_of_birth_placeholder`)}></DatePicker>
+                <DatePicker value={selectedDate} onChange={handleDateChange} id={5} label={t(`date_of_birth`)} placeholder={t(`date_of_birth_placeholder`)}></DatePicker>
             </FormRow>
             <FormRow>
                 <FormRowItem flexBasis={60}>

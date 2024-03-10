@@ -17,6 +17,7 @@ export const NavbarButton = () => {
 
     const { t } = useTranslation();
     const location = useLocation();
+    console.log(location.pathname)
     if (location.pathname !== "/booking") {
         return (
             <Button

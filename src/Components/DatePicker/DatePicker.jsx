@@ -67,6 +67,7 @@ const DatePicker = ({ id, label, onChange, value, required, placeholder, }) => {
         const timezoneOffset = newDate.getTimezoneOffset();
         const adjustedDate = new Date(newDate.getTime() - timezoneOffset * 60 * 1000);
         const formattedDate = adjustedDate.toISOString().slice(0, 10);
+        console.log("Selected Date:", formattedDate);
         onChange({ target: { value: formattedDate } });
     };
 
@@ -94,7 +95,7 @@ const DatePicker = ({ id, label, onChange, value, required, placeholder, }) => {
                     onBlur={handleBlur}
                     id={id}
                     className="date__input"
-                    onChange={onChange}
+                    onChange={handleDateChange}
                     value={value}
                     required
                 />
