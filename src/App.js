@@ -15,7 +15,7 @@ function App() {
     <Router>
 
       <Routes>
-        <Route path='/booking' element={<BookApointment />} />
+        <Route path='/' element={<BookApointment />} />
         <Route path='/appointment-details' element={<AppointmentDetails />} />
         <Route path='/registration' element={<Registration />} />
         <Route path='/login' element={<Login />} />
