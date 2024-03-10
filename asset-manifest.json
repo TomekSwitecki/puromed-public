@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/puromed-public/static/css/main.c3738639.css",
-    "main.js": "/puromed-public/static/js/main.34f3282d.js",
+    "main.js": "/puromed-public/static/js/main.52ff2079.js",
     "static/media/PuromedLoginPhoto.png": "/puromed-public/static/media/PuromedLoginPhoto.7eb075790af39a470f9a.png",
     "static/media/PuromedRegistrationPhoto.png": "/puromed-public/static/media/PuromedRegistrationPhoto.eea7462f20b31e475075.png",
     "static/media/PuromedLogotype.svg": "/puromed-public/static/media/PuromedLogotype.1983fde6bee13a633c98c66148762404.svg",
@@ -17,10 +17,10 @@
     "static/media/chevron_calendar_hover.svg": "/puromed-public/static/media/chevron_calendar_hover.6ce8eea33d70033af020.svg",
     "static/media/checkmark.svg": "/puromed-public/static/media/checkmark.d05efea035bae66b2c02.svg",
     "main.c3738639.css.map": "/puromed-public/static/css/main.c3738639.css.map",
-    "main.34f3282d.js.map": "/puromed-public/static/js/main.34f3282d.js.map"
+    "main.52ff2079.js.map": "/puromed-public/static/js/main.52ff2079.js.map"
   },
   "entrypoints": [
     "static/css/main.c3738639.css",
-    "static/js/main.34f3282d.js"
+    "static/js/main.52ff2079.js"
   ]
 }
