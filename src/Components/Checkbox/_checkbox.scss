@@ -1,0 +1,85 @@
+@import "../../mixins";
+
+@mixin checkmark() {
+    content: url("/src/Resources/checkmark.svg");
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2px;
+    width: 24px;
+    height: 24px;
+    top: -1px;
+}
+
+
+.checkbox__input-container {
+    position: relative;
+    display: flex;
+    padding: 4px 8px 4px 4px;
+    align-items: center;
+
+    border-radius: 4px;
+    background: $light-gray;
+
+
+    color: $dark;
+    text-align: center;
+    @include input-auxiliary-label($dark);
+    cursor: pointer;
+
+    &--primary {
+        background: $green;
+        color: $white; // Customize with your text color for primary
+
+        input[type="checkbox"]:checked {
+            background-color: $secondary-green;
+            border: 1px solid $green;
+            @include smooth;
+        }
+    }
+
+    &--disabled {
+        opacity: 0.5;
+
+        .checkbox__input,
+        input[type="checkbox"],
+        input[type="checkbox"]:checked,
+        input[type="checkbox"]:checked::after {
+            cursor: not-allowed;
+        }
+    }
+}
+
+
+.checkbox__input {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    border: 1px solid $gray-2;
+    background: $white;
+    flex-shrink: 0;
+    cursor: pointer;
+    @include smooth;
+}
+
+input[type="checkbox"]:checked {
+    background-color: $green;
+    border: 1px solid $green;
+    @include smooth;
+}
+
+input[type="checkbox"]:checked::after {
+    @include checkmark;
+}

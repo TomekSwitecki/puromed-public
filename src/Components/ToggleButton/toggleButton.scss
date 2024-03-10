@@ -1,0 +1,61 @@
+@import "../../mixins";
+@import "../../inputs";
+
+.toggle {
+    @include input-wrapper;
+}
+
+.toggle-button__label {
+    @include Label
+}
+
+.toggle-button__group {
+    display: flex;
+    padding: 4px;
+    gap: 4px;
+    border-radius: 8px;
+    border: 1px solid $gray-1;
+    background: $light-gray;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.toggle-button {
+    position: relative;
+    display: flex;
+    padding: 8px 12px 10px 12px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: $gray-2;
+
+    cursor: pointer;
+    @include TagFont;
+    @include smooth;
+}
+
+
+
+.toggle-button--selected {
+    gap: 8px;
+    background: $white;
+    color: $dark;
+    border: none;
+    box-shadow: 0px 2px 10px 0px rgba(147, 150, 174, 0.25);
+    border-radius: 6px;
+
+    @include smooth(box-shadow, 0.33s);
+}
+
+
+.toggle-button--selected::before {
+    @include green-dot(false);
+
+}
+
+.toggle-button:hover {
+    @include input-hover;
+}

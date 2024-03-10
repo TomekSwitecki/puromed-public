@@ -1,0 +1,22 @@
+@import "../../../mixins";
+
+.card__name {
+    @include StrongLabel()
+}
+
+
+.card__title {
+    @include SilentLabel()
+}
+
+.card__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+
+    .card__header-titles {
+        display: flex;
+        flex-direction: column;
+    }
+}

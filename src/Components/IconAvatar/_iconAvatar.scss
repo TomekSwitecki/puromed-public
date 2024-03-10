@@ -1,0 +1,29 @@
+@import "../../mixins";
+
+.icon-avatar {
+
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+
+    svg {
+        stroke-width: 2.5;
+    }
+
+    &.icon-avatar--positive {
+        background: $secondary-green;
+        color: $green;
+
+    }
+
+    &.icon-avatar--default {
+        opacity: 0.5;
+        background: $gray-2;
+        fill: $light-gray;
+    }
+}

@@ -1,0 +1,53 @@
+@import "../../Components/Page/page";
+@import "../../mixins";
+
+.sign__container {
+    @extend .page__container;
+    margin-bottom: 0;
+    padding: 0;
+    height: calc(100vh - 81px);
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: unset;
+}
+
+.sign__form-wrapper {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .form {
+        width: 448px;
+        // height: 690px;
+
+        .button--primary {
+            width: 100%;
+        }
+    }
+
+}
+
+.sign__photo-wrapper {
+    flex-basis: 80%;
+    padding: 32px;
+    background-color: $light-gray;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 1000px) {
+    .sign__photo-wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: $mobile-large) {
+    .sign__container {
+        height: unset;
+    }
+}

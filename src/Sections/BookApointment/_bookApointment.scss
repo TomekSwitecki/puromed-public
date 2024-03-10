@@ -1,0 +1,51 @@
+@import "../../mixins";
+
+.control-group {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-end;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 32px;
+}
+
+.toggle-button__group {
+    width: 100%;
+}
+
+@media (min-width: $tablet) {
+    .toggle-button__group {
+        width: 250px;
+    }
+}
+
+
+@media (max-width: $laptop) {
+
+    .control-group {
+        flex-direction: column;
+
+    }
+}
+
+
+@media (max-width: $small-tablet) {
+
+    .page__container:not(#bookApointment):not(#apointmentDetails) {
+        .page__header {
+            display: none;
+        }
+    }
+}

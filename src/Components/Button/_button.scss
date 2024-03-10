@@ -1,0 +1,95 @@
+@import "../../mixins";
+
+.button {
+    position: relative;
+    display: flex;
+    padding: 13px 48px 15px 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    text-align: center;
+    border: none;
+    outline: none;
+
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 0;
+
+    cursor: pointer;
+    @include smooth;
+
+    &.button--compact {
+        padding: 10px 24px 12px 24px;
+    }
+
+    &.button--pill {
+        border-radius: 64px;
+
+    }
+
+    &.button--rounded {
+        border-radius: 8px;
+
+    }
+
+    &.button--filled {
+
+        &.button--default {
+            color: $dark;
+            background: $light-gray;
+            border: 1px solid $gray-1;
+        }
+
+        &.button--primary {
+            color: $white;
+            background: $green;
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+        }
+
+        &.button--black {
+            background: $dark;
+            color: $white;
+        }
+
+        &.button--gray {
+            background: $light-gray;
+            color: $gray-2;
+        }
+
+
+        &.button--primary:hover {
+            background: $button-green-hover;
+        }
+    }
+
+    &.button--outlined {
+        &.button--default {
+            color: $dark;
+            background: $white;
+            border: 1px solid $gray-1;
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+        }
+
+        &.button--black {
+            color: $dark;
+            background: $white;
+            border: 1px solid $gray-1;
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+        }
+    }
+
+
+}
+
+button[disabled] {
+    background: $gray-1 !important;
+    color: $gray-2 !important;
+    cursor: not-allowed !important;
+}
+
+
+.button:hover {
+    cursor: pointer;
+    @include hover(false);
+}

@@ -1,0 +1,16 @@
+@import "../../mixins";
+
+.content-card {
+    height: fit-content;
+    @include card;
+
+    .header-icon {
+        @include iconSize(64px)
+    }
+
+    .header {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

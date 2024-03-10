@@ -1,0 +1,72 @@
+@import "../../mixins";
+
+.menu-button {
+    .header {
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    border-radius: 4px;
+    border: 1px solid $gray-1;
+
+
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+    max-width: 448px;
+    padding: 32px 32px 24px 32px;
+
+    cursor: pointer;
+    @include smooth;
+}
+
+
+.menu-button--selected {
+    .header {
+        .heading {
+            color: $white;
+        }
+
+        .header-icon {
+            fill: $white;
+            color: $white;
+        }
+
+        .header-subtitle {
+            color: $light-gray;
+        }
+    }
+
+    background: $green;
+
+}
+
+.menu-button:hover:not(.menu-button--selected) {
+    .header-icon {
+        fill: $green;
+    }
+
+    @include smooth;
+}
+
+.menu-button:hover {
+    box-shadow: 0px 4px 0px 0px #DDD;
+    @include smooth;
+    @include hover(false);
+}
+
+@media (max-width: $high-res) {
+
+    .menu-button {
+        padding: 24px;
+
+        .header-icon {
+            display: none;
+        }
+
+        .heading {
+            font-size: 24px;
+        }
+    }
+}

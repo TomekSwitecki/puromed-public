@@ -1,0 +1,54 @@
+@import "../../mixins";
+
+.form {
+    display: flex;
+    height: fit-content;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    @include card;
+
+
+    .header {
+        margin-bottom: 16px;
+    }
+
+    .button--primary {
+        margin-top: 12px;
+    }
+
+    .header-icon {
+        @include iconSize(64px)
+    }
+}
+
+.form__row {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 32px;
+
+    &.form__row--fit-content {
+        width: fit-content;
+    }
+}
+
+
+@media (max-width:$mobile-large) {
+    .form:not(#login):not(#registration) {
+        padding: 0;
+        border: none;
+    }
+
+    .form__row {
+        flex-wrap: wrap;
+
+        .form__row-item {
+            flex-basis: 100% !important;
+        }
+    }
+}

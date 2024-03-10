@@ -1,0 +1,7 @@
+@import "../../mixins";
+
+.divider {
+    height: 2px;
+    background-color: $gray-1;
+    border: none;
+}

@@ -1,0 +1,47 @@
+@import "partials";
+@import "colors";
+@import "mixins";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 33px;
+  background: #F0F0F0;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  border-radius: 33px;
+  background: #C2C2C2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  width: 8px;
+  border-radius: 33px;
+  background: $gray-2;
+}

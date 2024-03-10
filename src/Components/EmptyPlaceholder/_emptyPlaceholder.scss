@@ -1,0 +1,10 @@
+@import "../../mixins";
+
+.empty-placeholder {
+    background: $light-gray;
+
+    margin: auto;
+    max-width: 800px;
+    box-shadow: 0px 4px 34px 0px rgba(84, 87, 105, 0.24);
+
+}

@@ -1,0 +1,184 @@
+@import "../../mixins";
+
+
+.navbar {
+    position: sticky;
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    top: 0;
+
+    border-bottom: 1px solid $gray-1;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+    background: $white;
+    z-index: 150;
+    @include smooth;
+
+}
+
+.auth-buttons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    #register-button {
+        padding: 10px 48px 12px 48px;
+        box-shadow: 0px 4px 34px 0px rgba(0, 184, 10, 0.26);
+    }
+}
+
+
+.navbar--mobile {
+    @extend .navbar;
+    display: none;
+    @include smooth;
+
+    .navbar__content {
+        flex-direction: column;
+        gap: 32px;
+        align-items: flex-start;
+
+
+
+        .navbar__buttons {
+            display: flex;
+            gap: 32px;
+            @include smooth;
+        }
+    }
+
+    #navbar-button {
+
+        width: 100%;
+        @include smooth;
+    }
+}
+
+
+.navbar__content {
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    padding: 24px 64px;
+    @include smooth;
+}
+
+.navbar__buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+#navbar-button {
+    min-width: 280px;
+    height: 40px;
+    padding-left: 48px;
+    padding-right: 36px;
+}
+
+#navbar-button:not(.button--default):before {
+    @include green-dot(true, absolute, 24px);
+}
+
+#navbar-button:before {
+    @include disabled-dot(true, absolute, 24px);
+}
+
+@media (max-width: 1640px) {
+    .profile-menu-wrapper {
+        margin-right: 64px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .navbar__content {
+        padding: 24px 32px;
+        @include smooth;
+    }
+
+    .navbar {
+        .profile-menu-wrapper {
+            margin-right: 0;
+        }
+    }
+
+    #options_language_selector {
+        display: flex;
+    }
+
+    #navbar_language_selector {
+        display: none;
+    }
+
+}
+
+@media (max-width: $tablet) {
+
+    .logo__container {
+        svg {
+            width: 150px;
+        }
+    }
+
+
+    .navbar__buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: $small-tablet) {
+    .navbar:not(.navbar--simple, .navbar--mobile) {
+        display: none;
+    }
+
+    .logo__container {
+        margin-left: 24px;
+    }
+
+    .navbar--mobile {
+        display: flex;
+        gap: 0;
+    }
+
+    .auth-buttons-container {
+        width: 100%;
+
+        #register-button {
+            width: 100%;
+        }
+    }
+
+    #navbar_language_selector {
+        display: flex;
+        top: 32px;
+        right: 40px;
+    }
+}
+
+
+
+
+@media (max-width: $mobile-large) {
+    .navbar__content {
+        padding: 24px 24px;
+    }
+
+    #navbar-button {
+        min-width: 240px;
+    }
+
+    .navbar--mobile {
+        .navbar__content {
+            .navbar__buttons {
+                gap: 4px;
+            }
+        }
+    }
+
+
+}

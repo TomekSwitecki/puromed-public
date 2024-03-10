@@ -1,0 +1,56 @@
+@import "../../mixins";
+
+.header {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-items: start;
+
+    gap: 24px;
+}
+
+.header-subtitle {
+    color: $dark;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    max-width: 470px;
+}
+
+.header-icon {
+    fill: $gray-1;
+    color: $gray-1;
+    @include iconSize(100px)
+}
+
+
+.form {
+    .header {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-subtitle {
+        color: $gray-2;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: $tablet) {
+
+    #bookApointment,
+    #apointmentDetails {
+        .page__header {
+            flex-direction: column;
+
+            .header-icon {
+                display: none;
+            }
+        }
+    }
+}

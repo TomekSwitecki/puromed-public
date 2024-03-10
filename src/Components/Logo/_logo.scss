@@ -1,0 +1,18 @@
+@import "../../mixins";
+
+.logo__container {
+    display: flex;
+    width: auto;
+
+
+    svg {
+        width: 190px;
+    }
+
+    @include smooth;
+}
+
+.logo__container:hover {
+    @include smooth;
+    @include hover(false);
+}

@@ -1,0 +1,114 @@
+@import "../../mixins";
+
+
+.date-selector {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+
+    max-height: 32px;
+    align-items: center;
+
+    .hour-picker {
+        position: absolute;
+    }
+}
+
+.date-selector__controls {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.date-selector__controls--past {
+    .tag-button.primary {
+        width: 100%;
+    }
+}
+
+.date-selector__controls--scheduled {
+    text-wrap: nowrap;
+
+    .tag-button.secondary {
+        width: 100%;
+    }
+}
+
+
+
+.date-selector__label {
+    color: $gray-2;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.date-selector-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.date-info {
+    color: $dark;
+    text-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 8px;
+
+    @include TagFont;
+
+    .date-info__icon {
+        fill: $gray-2;
+    }
+
+}
+
+.date-selector__divider::after {
+    display: block;
+    position: relative;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    opacity: 0.5;
+    background-color: $gray-2;
+}
+
+@media (max-width: $small-tablet) {
+    .date-selector__divider {
+        display: none;
+    }
+
+    .date-selector {
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        max-height: unset;
+
+        .tag-button {
+            width: 100%;
+        }
+    }
+
+    .date-selector__controls {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+
+}
+
+@media (max-width: 500px) {
+    .hour-picker {
+        left: -30px;
+    }
+}

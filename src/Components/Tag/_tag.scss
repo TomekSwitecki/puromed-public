@@ -1,0 +1,70 @@
+@import "../../mixins";
+
+.tag-button {
+    display: inline-flex;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    text-align: center;
+
+
+    @include TagFont;
+    cursor: pointer;
+    @include smooth;
+
+    &.primary {
+        color: $green;
+        background: $secondary-green;
+        border: none;
+    }
+
+    &.secondary {
+        border: 1px solid $gray-1;
+        background: $light-gray;
+        color: $dark;
+    }
+
+    &.tertiary {
+        color: $dark;
+        border: 1px solid $gray-1;
+        background: $gray-1;
+    }
+
+    &.occupied {
+        border: none;
+        background: $light-gray;
+        color: $dark;
+        text-decoration: line-through;
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
+    &.disabled {
+        pointer-events: none;
+    }
+
+    &.not-available {
+        background: none;
+        border: none;
+        color: $gray-2;
+        pointer-events: none;
+        font-weight: 700;
+    }
+}
+
+.tag-button:hover {
+    background-color: $green;
+    color: $white;
+    @include smooth;
+}
+
+@media (max-width: $small-tablet) {
+    .date-selector__controls {
+        .tag-button {
+            height: 48px;
+            @include smooth;
+        }
+    }
+}

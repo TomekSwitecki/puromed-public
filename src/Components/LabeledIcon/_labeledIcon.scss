@@ -1,0 +1,13 @@
+@import "../../mixins";
+
+.labeled-icon {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+
+    .icon-label {
+        @include Label;
+        text-wrap: wrap;
+    }
+}

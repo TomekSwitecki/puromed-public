@@ -1,0 +1,125 @@
+@import "../../mixins";
+@import "../../inputs";
+
+.banner__wrapper {
+    position: relative;
+    width: 100%;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: $green;
+    display: flex;
+    flex-direction: row;
+    background-image: url("/src/Resources/fast-forward.svg");
+    background-position: 115px 35px;
+    background-repeat: no-repeat;
+    background-size: 30%;
+
+
+    .banner__header {
+        position: relative;
+        max-width: 420px;
+        display: flex;
+        padding: 32px 32px 24px 32px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        flex: 1 0 0;
+        align-self: stretch;
+
+
+
+        .header-icon {
+            fill: white;
+        }
+
+        .heading,
+        .header-subtitle {
+            color: $white;
+        }
+    }
+
+    .card {
+        border: none;
+        border-radius: 0px 4px 4px 0px;
+    }
+}
+
+.banner_tag {
+    position: absolute;
+    z-index: 50;
+    right: 24px;
+    top: 24px;
+
+
+    .tag-button {
+        padding: 8px 32px;
+        pointer-events: none;
+        box-shadow: 0px 0px 22px 0px rgba(0, 184, 10, 0.30);
+        background: $green;
+        color: $white;
+    }
+}
+
+@media (max-width: $laptop) {
+    .banner__wrapper {
+        flex-direction: column;
+        background-position: top 50%;
+        background-repeat: no-repeat;
+        background-size: 85%;
+    }
+
+    .banner_tag {
+        position: absolute;
+        border: 8px solid $white;
+        border-radius: 8px;
+        top: 216px;
+        right: 4px;
+    }
+
+    .banner_tag--mobile {
+        position: absolute;
+        border: 8px solid $white;
+        border-radius: 8px;
+        top: unset;
+        right: 0px;
+        bottom: -16px;
+    }
+
+    .banner__wrapper .banner__header {
+        max-width: unset;
+        align-items: flex-start;
+    }
+
+    .banner__header {
+        .header {
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (max-width: $mobile-large) {
+
+
+    .banner__wrapper {
+
+        .banner__header {
+            padding: 32px 32px 32px 32px;
+
+            .header {
+                gap: 8px;
+
+                .heading {
+                    font-size: 24px;
+                }
+            }
+
+
+            .header-subtitle {
+                display: none;
+            }
+        }
+    }
+}

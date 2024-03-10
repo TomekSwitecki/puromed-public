@@ -1,0 +1,21 @@
+@import "../../mixins";
+@import "../../inputs";
+
+.card {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    padding: 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid $gray-1;
+    background: $white;
+    box-shadow: 0px 9px 16px 0px rgba(218, 221, 232, 0.14);
+
+    .select__input-container {
+        pointer-events: none;
+    }
+}

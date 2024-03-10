@@ -1,0 +1,165 @@
+@import "../../mixins";
+
+.profile-menu-wrapper {
+    height: 40px;
+}
+
+.profile-menu {
+    display: flex;
+
+    padding: 4px 8px 4px 4px;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+    border-radius: 30px;
+    background: $light-gray;
+    border: none;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    align-items: center;
+
+    .icon-avatar {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        background: $gray-1;
+        opacity: 1;
+
+        svg {
+            width: 16px;
+            height: 16px;
+            stroke-width: 3px;
+            color: $gray-2;
+        }
+    }
+
+    .icon-avatar::before {
+        content: "";
+        bottom: 0;
+        right: 0;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        border-radius: 100%;
+        background-color: $green;
+
+        z-index: 2;
+    }
+
+    @include smooth;
+}
+
+.profile-menu__username {
+    padding: 0 8px;
+    @include SilentLabel($dark);
+}
+
+.profile-menu__chevron {
+    display: flex;
+    fill: $gray-2;
+    @include smooth;
+    opacity: 0.5;
+}
+
+.profile-menu:hover {
+    @include hover(false);
+    @include smooth;
+    background-color: $white;
+    outline: 2px solid $gray-1;
+
+    .profile-menu__chevron {
+        opacity: 1;
+        transform: rotate(180deg) rotateX(180deg) rotateZ(180deg);
+        ;
+        @include smooth;
+    }
+}
+
+
+.profile-menu__options-wrapper {
+    position: relative;
+    width: 195px;
+    display: flex;
+    padding: 8px;
+    margin-top: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    border: 1px solid $gray-1;
+    background: $white;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
+    @include smooth;
+
+    a {
+        text-decoration: none;
+        width: 100%;
+    }
+
+
+}
+
+.profile-menu__option {
+    display: flex;
+    padding: 11px 8px 11px 6px;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 8px;
+
+    fill: $dark;
+
+
+    @include Label;
+    text-wrap: wrap;
+    @include smooth;
+    cursor: pointer;
+
+    &.profile-menu__option--selected {
+        background-color: $green;
+        color: $white;
+        fill: $white;
+    }
+}
+
+
+
+.profile-menu__option-icon {
+    display: flex;
+    width: 20px;
+    height: 20px;
+
+    #icon,
+    svg {
+        width: 18px;
+        height: 18px;
+        stroke-width: 1.75;
+    }
+
+}
+
+.profile-menu__option:not(.profile-menu__option--selected):hover {
+    opacity: 1;
+    background-color: $light-gray;
+    outline: 1px solid $gray-1;
+    @include smooth;
+
+}
+
+.profile-menu__options-wrapper:hover {
+    @include smooth;
+    @include hover(false);
+}
+
+
+@media (max-width: $tablet) {
+
+    .profile-menu__username {
+        display: none;
+    }
+
+    .profile-menu__options-wrapper {
+        position: absolute;
+        right: 35px;
+    }
+}
+

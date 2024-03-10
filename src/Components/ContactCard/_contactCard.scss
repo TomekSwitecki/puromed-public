@@ -1,0 +1,18 @@
+@import "../../mixins";
+
+.contact-card {
+    height: fit-content;
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 12px;
+
+    border-radius: 6px;
+    border: 1px solid $gray-1;
+    background: $light-gray;
+
+
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+}
