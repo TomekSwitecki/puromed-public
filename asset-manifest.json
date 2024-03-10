@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/puromed-public/static/css/main.c3738639.css",
-    "main.js": "/puromed-public/static/js/main.470df360.js",
-    "static/media/PuromedLoginPhoto.png": "/puromed-public/static/media/PuromedLoginPhoto.7eb075790af39a470f9a.png",
-    "static/media/PuromedRegistrationPhoto.png": "/puromed-public/static/media/PuromedRegistrationPhoto.eea7462f20b31e475075.png",
-    "static/media/PuromedLogotype.svg": "/puromed-public/static/media/PuromedLogotype.1983fde6bee13a633c98c66148762404.svg",
-    "static/media/dojazd.svg": "/puromed-public/static/media/dojazd.f72c3c5bf40e8d3019481bece2a996b9.svg",
-    "static/media/parking.svg": "/puromed-public/static/media/parking.341a792336a4957f2408f17f801379db.svg",
-    "static/media/udogodnienia.svg": "/puromed-public/static/media/udogodnienia.3b3b38bff5d752066cef84127db4551c.svg",
-    "index.html": "/puromed-public/index.html",
-    "static/media/PuromedLogo.svg": "/puromed-public/static/media/PuromedLogo.52887ee14824aff6795cf181089987cd.svg",
-    "static/media/calendar.svg": "/puromed-public/static/media/calendar.bbb02a0a62ecdc5ed6f3.svg",
-    "static/media/fast-forward.svg": "/puromed-public/static/media/fast-forward.023ac166ecfed1da6706.svg",
-    "static/media/chevron.svg": "/puromed-public/static/media/chevron.c22abc982f27282587c0.svg",
-    "static/media/chevron_calendar.svg": "/puromed-public/static/media/chevron_calendar.476cb9e512e6f0be15f5.svg",
-    "static/media/chevron_calendar_hover.svg": "/puromed-public/static/media/chevron_calendar_hover.6ce8eea33d70033af020.svg",
-    "static/media/checkmark.svg": "/puromed-public/static/media/checkmark.d05efea035bae66b2c02.svg",
-    "main.c3738639.css.map": "/puromed-public/static/css/main.c3738639.css.map",
-    "main.470df360.js.map": "/puromed-public/static/js/main.470df360.js.map"
+    "main.css": "/puromed-public/booking/static/css/main.d9d7096b.css",
+    "main.js": "/puromed-public/booking/static/js/main.693afd33.js",
+    "static/media/PuromedLoginPhoto.png": "/puromed-public/booking/static/media/PuromedLoginPhoto.7eb075790af39a470f9a.png",
+    "static/media/PuromedRegistrationPhoto.png": "/puromed-public/booking/static/media/PuromedRegistrationPhoto.eea7462f20b31e475075.png",
+    "static/media/PuromedLogotype.svg": "/puromed-public/booking/static/media/PuromedLogotype.1983fde6bee13a633c98c66148762404.svg",
+    "static/media/dojazd.svg": "/puromed-public/booking/static/media/dojazd.f72c3c5bf40e8d3019481bece2a996b9.svg",
+    "static/media/parking.svg": "/puromed-public/booking/static/media/parking.341a792336a4957f2408f17f801379db.svg",
+    "static/media/udogodnienia.svg": "/puromed-public/booking/static/media/udogodnienia.3b3b38bff5d752066cef84127db4551c.svg",
+    "index.html": "/puromed-public/booking/index.html",
+    "static/media/PuromedLogo.svg": "/puromed-public/booking/static/media/PuromedLogo.52887ee14824aff6795cf181089987cd.svg",
+    "static/media/calendar.svg": "/puromed-public/booking/static/media/calendar.bbb02a0a62ecdc5ed6f3.svg",
+    "static/media/fast-forward.svg": "/puromed-public/booking/static/media/fast-forward.023ac166ecfed1da6706.svg",
+    "static/media/chevron.svg": "/puromed-public/booking/static/media/chevron.c22abc982f27282587c0.svg",
+    "static/media/chevron_calendar.svg": "/puromed-public/booking/static/media/chevron_calendar.476cb9e512e6f0be15f5.svg",
+    "static/media/chevron_calendar_hover.svg": "/puromed-public/booking/static/media/chevron_calendar_hover.6ce8eea33d70033af020.svg",
+    "static/media/checkmark.svg": "/puromed-public/booking/static/media/checkmark.d05efea035bae66b2c02.svg",
+    "main.d9d7096b.css.map": "/puromed-public/booking/static/css/main.d9d7096b.css.map",
+    "main.693afd33.js.map": "/puromed-public/booking/static/js/main.693afd33.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3738639.css",
-    "static/js/main.470df360.js"
+    "static/css/main.d9d7096b.css",
+    "static/js/main.693afd33.js"
   ]
 }
